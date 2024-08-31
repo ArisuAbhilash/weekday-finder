@@ -91,30 +91,6 @@ footer {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
-/* Responsive Design for Small Screens */
-@media (max-width: 768px) {
-    header h1 {
-        font-size: 2rem; /* Adjust font size for small screens */
-    }
-
-    header p {
-        font-size: 1rem;
-    }
-
-    .form-container h2 {
-        font-size: 1.5rem; /* Adjust font size for small screens */
-    }
-
-    input[type="date"] {
-        width: 100%; /* Make input full width on small screens */
-        max-width: none;
-    }
-
-    button {
-        width: 100%; /* Make button full width on small screens */
-        padding: 0.8rem;
-    }
-}
 
 /* Responsive Design for Small Screens */
 @media (max-width: 768px) {
