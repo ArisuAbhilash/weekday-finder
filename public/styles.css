@@ -1,0 +1,158 @@
+/* Basic reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+    padding: 20px; /* Add padding for small screens */
+}
+
+/* Container */
+.container {
+    text-align: center;
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 500px; /* Limit width on larger screens */
+    width: 100%; /* Ensure it takes full width on small screens */
+}
+
+/* Header styling */
+header h1 {
+    font-size: 2rem;
+    color: #333;
+}
+
+header p {
+    font-size: 1.2rem;
+    color: #666;
+    margin-top: 0.5rem;
+}
+
+/* Form container styling */
+.form-container {
+    margin-top: 2rem;
+}
+
+.form-container h2 {
+    font-size: 1.8rem;
+    color: #333;
+    margin-bottom: 1rem;
+}
+
+/* Input and button styling */
+input[type="date"] {
+    padding: 0.8rem;
+    font-size: 1rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    width: 80%;
+    max-width: 300px; /* Limit the max width */
+    margin-bottom: 1rem;
+}
+
+button {
+    padding: 0.8rem 1.5rem;
+    font-size: 1rem;
+    color: #fff;
+    background-color: #08554b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+/* Result styling */
+#result {
+    margin-top: 2rem;
+    font-size: 1.2rem;
+    color: #333;
+}
+
+/* Footer styling */
+footer {
+    margin-top: 3rem;
+    font-size: 1rem;
+    color: #777;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem; /* Adjust font size for small screens */
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .form-container h2 {
+        font-size: 1.5rem; /* Adjust font size for small screens */
+    }
+
+    input[type="date"] {
+        width: 100%; /* Make input full width on small screens */
+        max-width: none;
+    }
+
+    button {
+        width: 100%; /* Make button full width on small screens */
+        padding: 0.8rem;
+    }
+}
+
+/* Responsive Design for Small Screens */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 2rem; /* Adjust font size for small screens */
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    .form-container h2 {
+        font-size: 1.5rem; /* Adjust font size for small screens */
+    }
+
+    input[type="date"] {
+        width: 100%; /* Make input full width on small screens */
+        max-width: none;
+    }
+
+    button {
+        width: 100%; /* Make button full width on small screens */
+        padding: 0.8rem;
+    }
+}
+
+/* Specific Adjustment for Extra Small Screens (max-width 455px) */
+@media (max-width: 455px) {
+    header h1 {
+        font-size: 1.5rem; /* Reduce font size to prevent wrapping */
+    }
+
+    .container {
+        padding: 1rem; /* Adjust padding for smaller screens */
+    }
+
+    button {
+        padding: 0.7rem; /* Slightly reduce button padding */
+        font-size: 0.9rem; /* Adjust button text size */
+    }
+}
