@@ -46,22 +46,23 @@ As Flask-based web application  that effortlessly calculates the day of the week
    cd weekday-finder
 
 2. **Create a Virtual Environment:**
-   python -m venv venv
 
-3. **Activate the Virtual Environment:**
+       python -m venv venv
+
+4. **Activate the Virtual Environment:**
 
     *Windows:
 
-     venv\Scripts\activate
+       venv\Scripts\activate
 
     *Mac/Linux:
 
-     source venv/bin/activate
+       source venv/bin/activate
 
 
-4. **Install Dependencies:**
+5. **Install Dependencies:**
 
-   pip install Flask
+       pip install Flask
 
 
 
@@ -69,7 +70,7 @@ As Flask-based web application  that effortlessly calculates the day of the week
 
 1.  **Start the Flask Application:**
      
-     python app.py
+        python app.py
 
 2. Open a Web Browser: Go to http://127.0.0.1:5000/ to view the application.
      
@@ -80,7 +81,7 @@ As Flask-based web application  that effortlessly calculates the day of the week
 
 
 ## Usage
-Enter a date in the format YYYY-MM-DD.
+Enter a date in the format DD-MM-YYYY.
 Click the "🔍 Find Weekday" button.
 The application will display the day of the week and whether the year is a leap year.
 Contributing
