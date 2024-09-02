@@ -42,7 +42,7 @@ As Flask-based web application  that effortlessly calculates the day of the week
 1. **Clone the Repository:**
 
    ```bash
-   git clone https://github.com/yourusername/weekday-finder.git
+   git clone https://github.com/SnoopyAbhilash/weekday-finder.git
    cd weekday-finder
 
 2. **Create a Virtual Environment:**
