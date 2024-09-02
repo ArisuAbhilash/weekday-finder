@@ -1,33 +1,9 @@
+from flask import Flask, render_template, request
 
-# DAY NAME  OF THE GIVEN DATE CALCULATOR ALSO TELLS THAT THE GIVEN YEAR IS LEAP YEAR OR NOT 
-
-
-def day_of_week_calculator(day, month, year):
-    if month <= 3:
-        month += 12
-        year -= 1
-
-    k = year % 100
-    c = year // 100
-    
-    # USING "Zeller's Congruence Formula"
-
-    day_of_the_week = (day + (13 * (month + 1) // 5) + k + (k // 4) + (c // 4) - 2 * c) % 7
-
-    days = ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
-
-    return days[day_of_the_week]
-
-
-# Function to check given year is leap year or not
+app = Flask(__name__)
 
 def isleap_year(year):
-    if year % 4 == 0 and (year % 100 != 0 or year % 400 == 0):
-        return True
-    return False
-
-
-# validating the given date 
+    return year % 4 == 0 and (year % 100 != 0 or year % 400 == 0)
 
 def validate_date(day, month, year):
     if not (1 <= month <= 12):
@@ -43,36 +19,37 @@ def validate_date(day, month, year):
 
     return True, None
 
- 
-# taking input from user 
+def day_of_week_calculator(day, month, year):
+    if month <= 3:
+        month += 12
+        year -= 1
 
-date = input("Enter Date in given format (DD-MM-YYYY):")
+    k = year % 100
+    c = year // 100
 
-try:
-    day, month, year = map(int, date.split("-"))
-     
+    day_of_the_week = (day + (13 * (month + 1) // 5) + k + (k // 4) + (c // 4) - 2 * c) % 7
 
-    # error message of not valid date 
+    days = ["Saturday", "Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday"]
 
-    is_valid, error_message = validate_date(day, month, year)
-    if not is_valid:
-        print(error_message)
-    
-    else:
+    return days[day_of_the_week]
 
-        # message for leap year
-        leap_year_message = "This year is a leap year." if isleap_year(year) else "This year is not a leap year."
-
-        # Calculate the day of the week
-        day_of_week = day_of_week_calculator(day, month, year)
+@app.route('/', methods=['GET', 'POST'])
+def index():
+    if request.method == 'POST':
+        date_input = request.form['date']
+        day, month, year = map(int, date_input.split('-')[::-1])  # Split and reverse to get day, month, year
         
+        is_valid, error_message = validate_date(day, month, year)
+        if not is_valid:
+            return render_template('index.html', error=error_message)
+        
+        day_of_week = day_of_week_calculator(day, month, year)
+        is_leap = isleap_year(year)
+        leap_year_message = "The year is a leap year." if is_leap else "The year is not a leap year."
+        
+        return render_template('index.html', day_of_week=day_of_week, leap_year_message=leap_year_message, date=date_input)
+    
+    return render_template('index.html')
 
-        # showing final result
-
-        print(f"The day of the week for {date} is {day_of_week}.")
-        print(leap_year_message)
-
-except ValueError:
-    print("Invalid date format. Please use DD-MM-YYYY.")
-
-
+if __name__ == '__main__':
+    app.run(debug=False)

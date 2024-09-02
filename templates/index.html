@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Weekday Finder</title>
+    <link rel="stylesheet" href="/static/styles.css">
+
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🌟 Weekday Finder 🌟</h1>
+        </header>
+
+        <main>
+            <div class="form-container">
+                <h2>Enter Your Date</h2>
+
+                <!-- Flask expects 'date' as the input name -->
+                <form action="/" method="POST">
+                    <input type="date" name="date" id="DateInput" required>
+                    <button type="submit">🔍 Find Weekday</button>
+                </form>
+            </div>
+
+            <div id="result">
+                <!-- Display result dynamically using Flask -->
+                {% if day_of_week %}
+                    <p>The day of the week for {{ date }} is {{ day_of_week }}.</p>
+                    <p>{{ leap_year_message }}</p>
+                {% endif %}
+                {% if error %}
+                    <p class="error">{{ error }}</p>
+                {% endif %}
+            </div>
+        </main>
+
+        <footer>
+            <p>Made With Passion by ABHILASH MAURYA</p>
+        </footer>
+    </div>    
+</body>
+</html>
