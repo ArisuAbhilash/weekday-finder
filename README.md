@@ -81,7 +81,7 @@ As Flask-based web application  that effortlessly calculates the day of the week
 
 
 ## Usage
-Enter a date in the format YYYY-MM-DD.
+Enter a date in the format DD-MM-YYYY.
 Click the "🔍 Find Weekday" button.
 The application will display the day of the week and whether the year is a leap year.
 Contributing
