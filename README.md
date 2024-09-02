@@ -1,10 +1,10 @@
-🌟 Weekday Finder
+## 🌟Weekday Finder
 
-A sleek Python application that effortlessly calculates the day of the week for any date you throw at it, using the magic of Zeller's Congruence formula. As a bonus, it checks if the year is a leap year! 🚀
+As Flask-based web application  that effortlessly calculates the day of the week for any date you throw at it, using the magic of Zeller's Congruence formula. As a bonus, it checks if the year is a leap year! 🚀
 
 
 
-✨ Features
+## Features
 
 📅 Date Validation: Robust validation of any date, including handling leap years with ease.
 
@@ -14,55 +14,79 @@ A sleek Python application that effortlessly calculates the day of the week for 
 
 
 
+## Project Structure
 
-
-🛠️ Installation
-
-Get started with Weekday Finder in just a few steps:
-
-Step1 : Clone the repository:
-
-        git clone https://github.com/SnoopyAbhilash/weekday-finder.git
-        cd weekday-finder
-
-step2: 
-      Run the script:
-      No dependencies needed! Just run it with Python:
-      
-      python weekday_finder.py
-
-
-🚀 Usage
-
-1. Input Your Date: Enter a date in the format DD-MM-YYYY.
-   
-    Enter Date in given format (DD-MM-YYYY): 15-08-2024
-
-2. See the Magic Happen: The program outputs the day of the week and tells you if it's a leap year!
-
-     The day of the week for 15-08-2024 is Thursday.
-     The year is a leap year.
-
-🧠 How It Works
+- `app.py`: Main application file containing the Flask routes and logic.
+- `templates/`: Directory containing HTML templates.
+  - `index.html`: Main HTML template for the web application.
+- `static/`: Directory containing static files like CSS.
+  - `styles.css`: CSS file for styling the web application.
+- `.gitignore`: Specifies files and directories to be ignored by Git.
+- `README.md`: This file.
 
 
 
+## Getting Started
 
 
 
+### Prerequisites
 
-
-🎉 Thank you for checking out Weekday Finder! Happy coding! 🎉
-
-
-
-
+- Python 3.x
+- Flask
 
 
 
+### Installation
+
+1. **Clone the Repository:**
+
+   ```bash
+   git clone https://github.com/yourusername/weekday-finder.git
+   cd weekday-finder
+
+2. **Create a Virtual Environment:**
+   python -m venv venv
+
+3. **Activate the Virtual Environment:**
+
+    *Windows:
+
+     venv\Scripts\activate
+
+    *Mac/Linux:
+
+     source venv/bin/activate
+
+
+4. **Install Dependencies:**
+
+   pip install Flask
 
 
 
+## Running the Application
 
-
+1.  **Start the Flask Application:**
      
+     python app.py
+
+2. Open a Web Browser: Go to http://127.0.0.1:5000/ to view the application.
+     
+
+
+
+
+
+
+## Usage
+Enter a date in the format YYYY-MM-DD.
+Click the "🔍 Find Weekday" button.
+The application will display the day of the week and whether the year is a leap year.
+Contributing
+Feel free to open issues or submit pull requests if you have suggestions or improvements!
+
+
+## Contact
+For any inquiries, please reach out to your- mauryaabhilash912@gmail.com
+
