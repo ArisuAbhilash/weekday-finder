@@ -1,6 +1,6 @@
 ## 🌟Weekday Finder
 
-As Flask-based web application  that effortlessly calculates the day of the week for any date you throw at it, using the magic of Zeller's Congruence formula. As a bonus, it checks if the year is a leap year! 🚀
+A Flask-based web application  that effortlessly calculates the day of the week for any date you throw at it, using the magic of Zeller's Congruence formula. As a bonus, it checks if the year is a leap year! 🚀
 
 
 
